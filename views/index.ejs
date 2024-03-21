@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/image/圖層 0.png" />
+    <title>芳鍋</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ reset: true });
+    </script>
+  </head>
+  <body>
+    <!-- <div class="background123">
+      <div class="full-screen-image">
+        <img src="/image/芳鍋logo1.png" style="width: 100%" />
+      </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./mainPage.html"
+          ><img src="/image/芳鍋logo1.png" style="width: 200px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse justify-content-end" id="navbarScroll">
+          <ul
+            class="navbar-nav"
+            style="--bs-scroll-height: 100px; width: 1000px; font-size: 20px"
+          >
+            <li class="nav-item h3">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./mainPage.html"
+                ><b>首頁</b></a
+              >
+            </li>
+            <li class="nav-item h3">
+              <a class="nav-link active" href="./infomationPage.html"
+                ><b>最新活動</b></a
+              >
+            </li>
+            <li class="nav-item dropdown h3">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <b>菜單資訊</b>
+              </a>
+              <ul
+                class="dropdown-menu w-50"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="./manuPage_base.html"
+                    ><b>鍋物湯底</b></a
+                  >
+                </li>
+                <hr />
+                <li>
+                  <a class="dropdown-item" href="./manuPage_meat.html"
+                    ><b>單點品項</b></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item h3">
+              <a class="nav-link active" href="./contactUsPage.html"
+                ><b>聯繫我們</b></a
+              >
+            </li>
+
+            <li class="nav-item h3">
+              <a class="nav-link active" href="./storyPage.html"
+                ><b>關於芳鍋</b></a
+              >
+            </li>
+            <% if(user){ %>
+            <li class="nav-item h3">
+              <a class="nav-link active" href="/auth/logout"><b>會員登出</b></a>
+            </li>
+            <% }%> <% if(!user){ %>
+            <li class="nav-item dropdown h3">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="/auth/login"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <b>會員登入</b>
+              </a>
+              <ul
+                class="dropdown-menu w-50"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="/auth/login"><b>登入</b></a>
+                </li>
+                <hr />
+                <li>
+                  <a class="dropdown-item" href="/auth/signup"><b>註冊</b></a>
+                </li>
+              </ul>
+            </li>
+            <% }%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sectionImg">
+      <img src="/image/首頁大圖1.jpg" class="img2" alt="" margin-top: 300px; />
+    </div>
+
+    <div
+      class="part2-1 text-center"
+      style="
+        margin-top: 70px;
+        height: 100px;
+        background-color: gray;
+        font-size: 30px;
+      "
+    >
+      <p style="color: rgb(89, 83, 83)">- FEATURE -</p>
+      <p><b>幸福的滋味重新定義</b></p>
+    </div>
+
+    <div class="part2-2 row mt-5 px-4">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            class="img-fluid"
+            src="/image/info1.jpg"
+            style="border-radius: 10px"
+          />
+
+          <div class="card-body">
+            <h3 class="card-title">貼心服務，專屬幸福！</h3>
+            <p class="card-text">
+              貼心服務、多樣化創意！將人力發揮最高價值提供精緻又有溫度的服務，並結合智慧科技送餐機器貓，造就全新用餐體驗，更要用「幸福感」打入您的心房。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img
+            class="img-fluid"
+            src="/image/info2.jpeg"
+            style="border-radius: 10px"
+          />
+
+          <div class="card-body">
+            <h3 class="card-title">尊榮環境，視覺享受！</h3>
+            <p class="card-text">
+              我們將美味重新定義，打造貼心服務與美味食物的對話環境，感受不僅只限於舌尖，熱情燃起美味炙燒，徜徉味覺與視覺的尊榮享受。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            class="img-fluid"
+            src="/image/info3.jpeg"
+            style="border-radius: 10px"
+          />
+
+          <div class="card-body">
+            <h3 class="card-title">安心防疫，幸福團聚！</h3>
+            <p class="card-text">
+              幸福團聚時刻，屋馬升級防疫措施。全場空氣每6分鐘連續換新鮮空氣一次，保持全場通風、強勢負壓環境，讓溫情歡樂的時刻，用餐環境更加倍安心！
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part3-1 text-center" style="margin-top: 70px; height: 100px">
+      <p style="color: rgb(89, 83, 83)">- new infomation -</p>
+      <p style="font-size: 60px"><b>最新活動</b></p>
+    </div>
+
+    <div
+      class="part3-2 container mt-5 d-flex justify-content-center"
+      style="width: 100%"
+    >
+      <div class="row">
+        <div class="col-sm-7 mt-5 infoImg">
+          <img src="/image/廣告/活動1.png" alt="" style="border-radius: 10px" />
+        </div>
+        <div class="col-sm-5 ps-5 infoContent" style="padding-top: 150px">
+          <p>2024.01.01 - 2024.06.30</p>
+          <h1><b>2024瘋Pay陪你瘋點數</b></h1>
+          <h4><b>瘋Pay綁定指定信用卡可享瘋點數最高10%!!</b></h4>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div
+          style="margin-top: 50px"
+          class="container-sm d-flex justify-content-center infoButton"
+        >
+          <a
+            href="./infomationPage.html"
+            class="btn btn-outline-primary"
+            style="width: 300px; color: blue; font-size: px"
+            ><b>詳細資訊</b></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="part4-1 text-center mb-0 recommend"
+      style="margin-top: 100px; height: 100px"
+    >
+      <p style="color: rgb(89, 83, 83)">- recommend -</p>
+      <p style="font-size: 60px"><b>推薦餐點</b></p>
+    </div>
+
+    <div
+      id="carouselExampleDark"
+      class="carousel slide m-auto carousel-dark carousel-fade"
+      data-bs-ride="carousel"
+      style="width: 70%"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="/image/廣告/未命名-1.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/image/廣告/未命名-2.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/image/廣告/未命名-3.png" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+        style="left: -50px"
+      >
+        <span
+          class="carousel-control-prev-icon"
+          aria-hidden="true"
+          style="size: 20px"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+        style="right: -50px"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--footer start-->
+
+    <div class="footer container-fluid" style="position: relative; width: 100%">
+      <!--logo-->
+      <img
+        style="width: 200px; position: absolute; left: 129px; top: 259px"
+        src="/image/圖層 0.png"
+        alt=""
+      />
+
+      <!--footer選項-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          position: absolute;
+          left: 509px;
+          bottom: 130px;
+        "
+      >
+        <a
+          href="#"
+          style="
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+          "
+          >隱私權政策</a
+        >
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          position: absolute;
+          left: 629px;
+          bottom: 153px;
+        "
+      >
+        <a
+          href="#"
+          style="
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+          "
+          >聯絡我們</a
+        >
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          position: absolute;
+          left: 749px;
+          bottom: 153px;
+        "
+      >
+        <a
+          href="#"
+          style="
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+          "
+          >最新消息</a
+        >
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          position: absolute;
+          left: 869px;
+          bottom: 153px;
+        "
+      >
+        <a
+          href="#"
+          style="
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+          "
+          >關於我們</a
+        >
+      </div>
+
+      <!--fb,ig-->
+      <div id="connect">
+        <div
+          style="
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            left: 869px;
+            bottom: 153px;
+          "
+        >
+          <a href="#" style="position: absolute; right: 231px; bottom: 148px"
+            ><img src="/image/instagram.png" style="width: 80px"
+          /></a>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            left: 869px;
+            bottom: 153px;
+          "
+        >
+          <a href="#" style="position: absolute; right: 113px; bottom: 148px"
+            ><img src="/image/facebook.png" style="width: 80px"
+          /></a>
+        </div>
+      </div>
+
+      <!--隱私權-->
+      <div
+        style="display: flex; align-items: flex-start; gap: 10px"
+        id="privacy"
+      >
+        <p
+          style="position: absolute; right: 50px; bottom: 20px; font-size: 10px"
+        >
+          芳鍋 版權所有 2024 ©All rights reserved
+        </p>
+      </div>
+    </div>
+
+    <!--footer end-->
+
+    <script>
+      ScrollReveal().reveal(".sectionImg", { delay: 50 });
+      // ScrollReveal().reveal('.img2', { delay: 200 });
+
+      ScrollReveal().reveal(".part2-1", { delay: 100 });
+      ScrollReveal().reveal(".part2-2", { delay: 400 });
+
+      ScrollReveal().reveal(".part3-1", { delay: 100 });
+      ScrollReveal().reveal(".part3-2", { delay: 400 });
+
+      ScrollReveal().reveal(".part4-1", { delay: 100 });
+      ScrollReveal().reveal("#carouselExampleDark", { delay: 100 });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const fullScreenImage = document.querySelector(".full-screen-image");
+        const background = document.querySelector(".background123");
+
+        fullScreenImage.style.transform = "scale(0.1)"; // 初始尺寸更小
+        fullScreenImage.style.opacity = "1"; // 初始透明度为1
+
+        setTimeout(function () {
+          fullScreenImage.style.transform = "scale(1)"; // 将图像放大到原始大小
+        }, 500); //延遲時間
+
+        fullScreenImage.addEventListener("animationend", function () {
+          fullScreenImage.style.display = "none"; // 隐藏特效
+          background.style.display = "none"; // 隐藏背景
+        });
+      });
+    </script>
+  </body>
+</html>

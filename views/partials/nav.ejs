@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"
+      ><img src="/image/芳鍋logo1.png" style="width: 200px"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse justify-content-end" id="navbarScroll">
+      <ul
+        class="navbar-nav"
+        style="--bs-scroll-height: 100px; width: 1000px; font-size: 20px"
+      >
+        <li class="nav-item h3">
+          <a class="nav-link active" aria-current="page" href="/"
+            ><b>首頁</b></a
+          >
+        </li>
+        <li class="nav-item h3">
+          <a class="nav-link active" href="./infomationPage.html"
+            ><b>最新活動</b></a
+          >
+        </li>
+        <li class="nav-item dropdown h3">
+          <a
+            class="nav-link dropdown-toggle active"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <b>菜單資訊</b>
+          </a>
+          <ul
+            class="dropdown-menu w-50"
+            aria-labelledby="navbarScrollingDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="./manuPage_base.html"
+                ><b>鍋物湯底</b></a
+              >
+            </li>
+            <hr />
+            <li>
+              <a class="dropdown-item" href="./manuPage_meat.html"
+                ><b>單點品項</b></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item h3">
+          <a class="nav-link active" href="./contactUsPage.html"
+            ><b>聯繫我們</b></a
+          >
+        </li>
+
+        <li class="nav-item h3">
+          <a class="nav-link active" href="./storyPage.html"><b>關於芳鍋</b></a>
+        </li>
+        <% if(user){ %>
+        <li class="nav-item h3">
+          <a class="nav-link active" href="/auth/logout"><b>會員登出</b></a>
+        </li>
+        <% }%> <% if(!user){ %>
+        <li class="nav-item dropdown h3">
+          <a
+            class="nav-link dropdown-toggle active"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <b>會員登入</b>
+          </a>
+          <ul
+            class="dropdown-menu w-50"
+            aria-labelledby="navbarScrollingDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="/auth/login"><b>登入</b></a>
+            </li>
+            <hr />
+            <li>
+              <a class="dropdown-item" href="/auth/signup"><b>註冊</b></a>
+            </li>
+          </ul>
+        </li>
+        <% }%>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,261 @@
+/*RWD*/
+
+@media only screen and (max-width: 1000px) {
+  .recommend {
+    margin-bottom: 300px;
+  }
+  .carousel {
+    top: 0;
+    width: 50%;
+    height: 400px;
+  }
+  #navbarScroll {
+    height: 300px;
+  }
+  #privacy {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #connect {
+    visibility: hidden;
+  }
+  .footer {
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .infoContent {
+    display: none;
+  }
+  .infoImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .infoButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*輪播設定*/
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*進場特效*/
+.background123 {
+  background-color: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+
+.full-screen-image {
+  /* background-image: url('../image/芳鍋logo1.png');
+    background-size:cover;
+    background-position: center; */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  animation: zoomOut 3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.1); /* 初始尺寸 */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.1); /* 停留在最小尺寸 */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7); /* 最终尺寸 */
+    opacity: 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../image/backgroundY.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+ul {
+  height: 100px;
+  width: 1000px;
+}
+li {
+  width: 150px;
+}
+.img2 {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.nav-link {
+  font-size: 20px;
+}
+.nav-item {
+  align-self: center;
+  /* outline: 1px solid black; */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url(../image/backgroundY.jpg);
+  background-repeat: repeat-x;
+  z-index: 100;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.card-footer {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.card-title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+.card-text {
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+.formContainer {
+  width: 90%;
+  background-image: url(../image/ai圖片/餐廳外觀2.jpg);
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+  height: 800px;
+}
+
+.footer {
+  background-image: url(../image/背景/footer1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 600px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  font-size: 18px;
+}
+
+.popup {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 70%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background-color: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-floating {
+  border: 1px solid gray;
+  border-radius: 5px;
+}

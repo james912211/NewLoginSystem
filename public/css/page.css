@@ -1,0 +1,198 @@
+@media only screen and (max-width: 1000px) {
+  .recommend {
+    margin-bottom: 300px;
+  }
+  .carousel {
+    top: 0;
+    width: 50%;
+    height: 400px;
+  }
+  #navbarScroll {
+    height: 300px;
+  }
+  #privacy {
+    visibility: hidden;
+  }
+  #connect {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #connect {
+    visibility: hidden;
+  }
+  .footer {
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .infoContent {
+    display: none;
+  }
+  .infoImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .infoButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../image/backgroundY.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+ul {
+  height: 100px;
+  width: 1000px;
+}
+li {
+  width: 150px;
+}
+.img2 {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.nav-link {
+  font-size: 20px;
+}
+.nav-item {
+  align-self: center;
+  /* outline: 1px solid black; */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url(../image/backgroundY.jpg);
+  background-repeat: repeat-x;
+  z-index: 100;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.card-footer {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.card-title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+.card-text {
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+.formContainer {
+  width: 90%;
+  background-image: url(../image/ai圖片/餐廳外觀2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+  height: 800px;
+}
+
+.footer {
+  background-image: url(../image/footer1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 600px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  font-size: 18px;
+}
+
+body,
+h3,
+p {
+  font-family: "微軟正黑體", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px; /* 為每個表單元素增加間距 */
+}
+.form-control {
+  border-radius: 0;
+}
+
+.btn-primary,
+.btn-success {
+  border-radius: 0;
+}
+h3 {
+  margin-bottom: 30px;
+}
+.btn-primary {
+  background-color: #007bff;
+}
+.btn-success {
+  background-color: #28a745;
+}
+.custom-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-container {
+  position: relative;
+  top: 150px;
+}
+.overlay {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.aLine:hover {
+  background-color: #01c301 !important;
+}
+
+.showPwd {
+  display: flex;
+  align-items: center;
+}
+
+.showPwd img {
+  width: 22px;
+  cursor: pointer;
+}
