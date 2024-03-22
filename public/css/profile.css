@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @media only screen and (max-width: 1000px) {
   .recommend {
     margin-bottom: 300px;
@@ -47,16 +48,17 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: url(../image/backgroundY.jpg);
+  background-image: url(../image/首頁大圖1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: repeat-x;
+  font-family: "Noto Sans TC", sans-serif;
 }
-ul {
+.main-nav ul {
   height: 100px;
   width: 1000px;
 }
-li {
+.main-nav li {
   width: 150px;
 }
 .img2 {
@@ -141,12 +143,6 @@ a:active {
   font-size: 18px;
 }
 
-body,
-h3,
-p {
-  font-family: "微軟正黑體", sans-serif;
-}
-
 .form-group {
   margin-bottom: 15px; /* 為每個表單元素增加間距 */
 }
@@ -158,9 +154,7 @@ p {
 .btn-success {
   border-radius: 0;
 }
-h3 {
-  margin-bottom: 30px;
-}
+
 .btn-primary {
   background-color: #007bff;
 }
@@ -186,86 +180,180 @@ h3 {
 .aLine:hover {
   background-color: #01c301 !important;
 }
-.showPwd {
+
+.container {
+  width: 100%;
+  height: 1200px;
+  background-image: url("./image/首頁大圖1.jpg");
+  position: relative;
+  background-position: center;
+}
+
+.container .box {
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.container .box h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.container .box .header {
+  width: 100%;
+  background-image: url("https://d3egcl3bvwgcig.cloudfront.net/vip/50b193037d9b16519b9e6c82bcfd9154_m.jpg");
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  text-align: center;
+  padding: 30px 0;
+}
+.container .box .header img {
+  border-radius: 50%;
+  width: 110px;
+}
+.container .box .header h2 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.container .box .header h4 {
+  font-weight: normal;
+  font-size: 13px;
+}
+.container .box .nav {
+  width: 100%;
+  max-height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+
+  padding: 15px 0;
+}
+.container .box .nav ul {
   display: flex;
+  width: 100%;
+
+  justify-content: space-around;
+
   align-items: center;
 }
 
-.showPwd img {
-  width: 22px;
+.container .box .nav ul li {
+  list-style: none;
+  color: #fff;
+}
+.container .box .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.container .box .main {
+  width: 100%;
+  background: #fff;
+  padding: 15px 8px;
+}
+.container .box .main .shopVIP {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
   cursor: pointer;
 }
-.container {
-  display: flex; /* 使用 Flexbox */
-  width: 90%;
-  min-height: 100vh;
-  margin: 150px auto;
+
+.container .box .main .shopVIP img {
+  width: 100px;
+  border-radius: 10px;
+}
+.container .box .main .shopVIP p {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.container .box .main .shopVIP small {
+  font-weight: 100;
+  color: #8e8e8e;
+}
+.container .box .main .history {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.container .box .main .history h6 {
+  font-size: 0.65rem;
+}
+.container .box .main .info {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+.container .box .main .info p {
+  margin-bottom: 1.25rem;
+  color: #8e8e8e;
+}
+.container .box .main .info a {
+  background: #f5f5f5;
+  color: #8e8e8e;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+}
+.container .box .main .info a:hover {
+  color: #000;
 }
 
-section.left {
-  width: 30%;
-  border-right: 1px solid rgb(163, 159, 159);
-  padding-right: 1rem;
-}
-
-section.left h2 {
-  padding-left: 1.75rem;
-}
-
-section.right {
-  flex: 1;
-  margin-left: 1rem;
-  /* border: 1px solid red; */
-}
-.sideMenu {
+.container .box .gift {
   width: 100%;
+  background-color: #fff;
+  cursor: pointer;
 }
-.sideMenu ul {
-  width: 100%;
-  list-style-type: none;
-}
-.sideMenu ul li {
-  /* border: 1px solid red; */
-  width: 100%;
-  padding: 0.8rem 0;
-}
-.sideMenu ul li a:hover {
-  opacity: 0.7;
-}
-.thumbnail {
-  border-bottom: 1px solid rgb(163, 159, 159);
+.container .box .gift .gift-item {
   text-align: center;
 }
-.thumbnail img {
-  border-radius: 50%;
-  object-fit: cover; /* 使圖片完全顯示在圖片框中，同時保持比例不變 */
-  width: 100px; /* 設定圖片寬度 */
-  height: 100px; /* 設定圖片高度 */
-}
-.memberLevel {
-  display: flex;
+.container .box .gift .gift-item img {
+  width: 90%;
   margin-top: 1rem;
-  gap: 1rem;
-  justify-content: start;
+  margin-bottom: 0.3rem;
+}
 
-  margin-top: 2.5rem;
-  /* border: 1px solid red; */
+.container .box .gift .gift-item p img {
+  width: 15px;
+  padding: 0 0 1rem 0;
 }
-.info p {
-  font-size: large;
+.edit {
+  width: 100%;
+  background: #fff;
+
+  border: 1px solid blue;
 }
-.memberLevel p {
-  font-size: large;
+.form-box {
+  width: 100%;
+  text-align: center;
+  border: 1px solid red;
 }
-.memberLevel button {
-  padding: 10px 15px;
-  border-radius: 25px;
-  outline: none;
-  border: none;
-  color: white;
-  background: orange;
-  transition: all ease 0.3s;
+.form-box h5 {
+  color: #000;
+  margin-top: 1rem;
 }
-.memberLevel button:hover {
-  background-color: rgb(255, 68, 0);
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-box form input {
+  width: 250px;
+  padding-left: 5px;
+  margin-bottom: 1rem;
+}
+.form-box form button {
+  outline: 0;
+  border: 0;
+  background: #ffea00;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }

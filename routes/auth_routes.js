@@ -17,7 +17,7 @@ router.get("/logout", (req, res) => {
     return res.redirect("/");
   });
 });
-
+//http://localhost:8080/auth/signup
 router.get("/signup", (req, res) => {
   return res.render("signup", { user: req.user });
 });
@@ -196,4 +196,49 @@ router.post("/reset-password", async (req, res) => {
   }
 });
 
+// 重設密碼
+router.get("/change-password", (req, res) => {
+  // 確保用戶已經登入
+  if (!req.isAuthenticated()) {
+    req.flash("error_msg", "請先登入");
+    return res.redirect("/auth/login");
+  }
+  return res.render("change-password", { user: req.user });
+});
+
+// 處理更改密碼的請求
+router.post("/change-password", async (req, res) => {
+  const { oldPassword, newPassword, confirmPassword } = req.body;
+
+  // 確保用戶已經登入
+  if (!req.isAuthenticated()) {
+    req.flash("error_msg", "請先登入");
+    return res.redirect("/auth/login");
+  }
+
+  const user = req.user; // 通過 Passport 獲得當前登入的用戶
+  console.log(oldPassword, newPassword, confirmPassword);
+  // 檢查舊密碼是否正確
+  const isMatch = await bcrypt.compare(oldPassword, user.password);
+  if (!isMatch) {
+    req.flash("error_msg", "舊密碼錯誤");
+    return res.redirect("/auth/change-password");
+  }
+
+  // 確認新密碼和確認密碼是否一致
+  if (newPassword !== confirmPassword) {
+    req.flash("error_msg", "新密碼和確認密碼不匹配");
+    return res.redirect("/auth/change-password");
+  }
+
+  // 更新密碼
+  const hashedPassword = await bcrypt.hash(newPassword, 12);
+  await pool.query("UPDATE users SET password = ? WHERE id = ?", [
+    hashedPassword,
+    user.id,
+  ]);
+
+  req.flash("success_msg", "密碼更改成功，3秒後將跳回個人頁面");
+  res.redirect("/auth/change-password");
+});
 module.exports = router;
